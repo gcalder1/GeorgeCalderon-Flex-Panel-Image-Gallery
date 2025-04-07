@@ -10,7 +10,7 @@
   <style>
     html {
       box-sizing: border-box;
-      background: #ffc600;
+      background: #252113;
       font-family: 'helvetica neue';
       font-size: 20px;
       font-weight: 200;
@@ -24,11 +24,16 @@
       box-sizing: inherit;
     }
 
+    .panelsContainer { /*grid appearance, flex row*/
+      display: flex;
+      flex-direction: column;
+    }
+
     .panels {
-      min-height: 100vh;
+      min-height: 33.33vh; /*splitting view port*/
       overflow: hidden;
       display: flex;
-      border: yellow solid 2px;
+      flex: 1;
     }
 
     .panel {
@@ -51,21 +56,30 @@
       align-items: center;
       display: flex;
       flex-direction: column;
-      border: blue solid 1px;
+      min-height: 200px;
     }
+    
 
-    .panel1 { background-image: url(/imageForFlexPanelAssignment/swedenBackground1.jpg) ; }
+    .panel1 { background-image: url(/imageForFlexPanelAssignment/swedenBackground1.jpg); }
     .panel2 { background-image: url(/imageForFlexPanelAssignment/swedenBackground2.jpg); }
     .panel3 { background-image: url(/imageForFlexPanelAssignment/swedenBackground5.jpg); }
     .panel4 { background-image: url(/imageForFlexPanelAssignment/swedenBackground4.jpg); }
     .panel5 { background-image: url(/imageForFlexPanelAssignment/swedenBackground3.jpg); }
+    .panel6 { background-image: url(/imageForFlexPanelAssignment/swedenBackground1.jpg); }
+    .panel7 { background-image: url(/imageForFlexPanelAssignment/swedenBackground2.jpg); }
+    .panel8 { background-image: url(/imageForFlexPanelAssignment/swedenBackground5.jpg); }
+    .panel9 { background-image: url(/imageForFlexPanelAssignment/swedenBackground4.jpg); }
+    .panel10 { background-image: url(/imageForFlexPanelAssignment/swedenBackground3.jpg); }
+    .panel11 { background-image: url(/imageForFlexPanelAssignment/swedenBackground1.jpg); }
+
+
+
 
     /* Flex Children */
     .panel > * {
       margin: 0;
       width: 100%;
       transition: transform 0.5s;
-      border: red solid 1px;
       flex: 1 0 auto;
       display: flex;
       justify-content: center;
@@ -91,38 +105,80 @@
     }
 
     .panel.open {
-      flex: 5;
-      font-size: 40px;
+      flex: 3;
+      font-size: 25px;
     }
+
+    .panel:not(.open):not(.open-active):hover{ /*using psuedo classes to target panels that don't have the open and open-active to make the hover effect more prominent*/
+      box-shadow: inset 0 0 10px 10px rgba(75, 83, 173, 0.3);
+      transform: scale(1.01); /*Makes the cursor-on element tiny bit larger to further create hover effect*/
+      cursor: pointer;
+    }
+    /*avoids having to tie hover to open and potential errors with transitionend*/
 
   </style>
 
-
-  <div class="panels">
-    <div class="panel panel1">
-      <p>Hey</p>
-      <p>Enjoy</p>
-      <p>Life</p>
+  <div class="panelsContainer">
+    <div class="panels">
+      <div class="panel panel9">
+        <p>Love</p>
+        <p>Always</p>
+        <p>Fully</p>
+      </div>
+      <div class="panel panel10">
+        <p>Lets</p>
+        <p>Walk</p>
+        <p>Forward</p>
+      </div>
+      <div class="panel panel11">
+        <p>Meaningful</p>
+        <p>Change</p>
+        <p>Inpires</p>
+      </div>
     </div>
-    <div class="panel panel2">
-      <p>You're</p>
-      <p>Going</p>
-      <p>Places</p>
+    <div class="panels">
+      <div class="panel panel1">
+        <p>Hey</p>
+        <p>Enjoy</p>
+        <p>Life</p>
+      </div>
+      <div class="panel panel2">
+        <p>You're</p>
+        <p>Going</p>
+        <p>Places</p>
+      </div>
+      <div class="panel panel3">
+        <p>Experiencing</p>
+        <p>Places</p>
+        <p>Today</p>
+      </div>
+      <div class="panel panel4">
+        <p>Great</p>
+        <p>With</p>
+        <p>Friends</p>
+      </div>
+      <div class="panel panel5">
+        <p>Treat</p>
+        <p>Yourself</p>
+        <p>Better</p>
+      </div>
     </div>
-    <div class="panel panel3">
-      <p>Experiencing</p>
-      <p>Places</p>
-      <p>Today</p>
-    </div>
-    <div class="panel panel4">
-      <p>Great</p>
-      <p>With</p>
-      <p>Friends</p>
-    </div>
-    <div class="panel panel5">
-      <p>Treat</p>
-      <p>Yourself</p>
-      <p>Better</p>
+    <div class="panels">
+      <div class="panel panel6">
+        <p>Another</p>
+        <p>Fun</p>
+        <p>Experience</p>
+      </div>
+      <div class="panel panel7">
+        <p>Beauty</p>
+        <p>All</p>
+        <p>Around</p>
+      </div>
+      <div class="panel panel8">
+        <p>I</p>
+        <p>Appreciate</p>
+        <p>You</p>
+      </div>
     </div>
   </div>
 
