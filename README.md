@@ -17,7 +17,7 @@ This repository contains all of the code from the JS30 finalized Code-Along with
 
 ## Credits ⭐
 
-This repository contains many of my personal images taken from my travels to Sweden and Dennmark over the last few years. The sunset and nature images are photos provided by [Pexel](https://www.pexels.com/) and their contributors for their copyright free, royalty free images.
+This repository contains many of my personal images taken from my travels to Sweden and Dennmark over the last few years. The sunset and nature images are photos provided by [Pexels](https://www.pexels.com/) and their contributors for their copyright free, royalty free images.
 
 ---
 
