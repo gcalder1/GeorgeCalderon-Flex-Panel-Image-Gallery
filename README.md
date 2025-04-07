@@ -21,4 +21,4 @@ This repository contains many of my personal images taken from my travels to Swe
 
 ---
 
-_Thank you so much for checking out this repository!_🎉
+_Thank you so much for checking out this repository!_ 🎉
