@@ -95,6 +95,13 @@
       font-size: 40px;
     }
 
+    .panel:not(.open):not(.open-active):hover{ /*using psuedo classes to target panels that don't have the open and open-active to make the hover effect more prominent*/
+      box-shadow: inset 0 0 10px 10px rgba(75, 83, 173, 0.3);
+      transform: scale(1.01);
+      cursor: pointer;
+    }
+    /*avoids having to tie hover to open and potential errors with transitionend*/
+
   </style>
 
 
